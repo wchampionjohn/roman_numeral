@@ -1,7 +1,10 @@
 class RomanNumerals
   def convert num
-    return 'III' if num == 3
-    return 'II' if num == 2
-    'I'
+    result = ''
+    while num > 0
+      result += 'I'
+      num -= 1
+    end
+    result
   end
 end
