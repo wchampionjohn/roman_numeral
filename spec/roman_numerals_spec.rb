@@ -10,6 +10,9 @@ describe 'Roman Numeral Converter' do
       [3, 'III'],
       [4, 'IV'],
       [5, 'V'],
+      [6, 'VI'],
+      [7, 'VII'],
+      [8, 'VIII'],
     ].each do |numeric_pair|
       it "should return #{numeric_pair.last} if convert number of #{numeric_pair.first}" do
         roman = RomanNumerals.new
