@@ -1,18 +1,21 @@
 class RomanNumerals
+
+  NUMERALS = [
+    ['V',  5],
+    ['IV', 4],
+    ['I',  1],
+  ]
+
   def convert num
     result = ''
-    if num == 5
-      result = 'V'
-      num -= 5
+
+    NUMERALS.each do |roman, arabic|
+      while num >= arabic
+        result += roman
+        num -= arabic
+      end
     end
-    if num == 4
-      result = 'IV'
-      num -= 4
-    end
-    while num > 0
-      result += 'I'
-      num -= 1
-    end
+
     result
   end
 end
